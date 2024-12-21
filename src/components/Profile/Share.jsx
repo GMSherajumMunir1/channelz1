@@ -31,7 +31,6 @@
 //     <div>
 //       <h1>Share</h1>
 //       <EmailShareButton url={url}>
-//         {" "}
 //         <EmailIcon size={40} round={true} />
 //       </EmailShareButton>
 //       <FacebookShareButton url={url}>
