@@ -44,7 +44,7 @@ const ProfilePage = () => {
       >
         <ProfileTabs />
         <ProfilePosts />
-        <Share />
+        {/* <Share /> */}
       </Flex>
     </Container>
   );
