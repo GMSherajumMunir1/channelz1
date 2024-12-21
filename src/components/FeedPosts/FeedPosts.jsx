@@ -36,10 +36,12 @@ const FeedPosts = () => {
         posts.map((post) => <FeedPost key={post.id} post={post} />)}
       {!isLoading && posts.length === 0 && (
         <>
-          <Text fontSize={"md"} color={"red.400"}>
-            Follow Others to see their posts on your feed.
+          <Text fontSize={"md"} color={"whiteAlpha.400"}>
+            Welcome to ChannelZ
           </Text>
-          <Text color={"red.400"}>Post something yourself please!</Text>
+          <Text color={"whiteAlpha.400"}>
+            Follow people to start seeing the news they share.
+          </Text>
         </>
       )}
     </Container>
