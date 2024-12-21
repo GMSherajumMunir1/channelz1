@@ -34,7 +34,7 @@ const Share = () => {
   const url = "https://channelz1.vercel.app";
   const title = "Check out my post in this App!";
   return (
-    <div style={{ background: "#0000", height: "100vh", width: "100%" }}>
+    <div>
       <h1>Share</h1>
       <EmailShareButton url={url}>
         {" "}
