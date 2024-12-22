@@ -45,7 +45,7 @@ const ProfilePage = () => {
   const userNotFound = !isLoading && !userProfile;
   if (userNotFound) return <UserNotFound />;
   const url = "https://channelz1.vercel.app";
-  const shareText = `Check out ${userProfile?.name}'s profile! Visit now: ${url}`;
+  const shareText = `Visit this app now: ${url}`;
 
   return (
     <Container maxW="container.lg" py={5}>
