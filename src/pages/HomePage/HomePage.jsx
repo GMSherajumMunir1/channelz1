@@ -28,6 +28,8 @@ import SuggestedUsers from "../../components/SuggestedUsers/SuggestedUsers";
 
 const HomePage = () => {
   const url = "https://channelz1.vercel.app";
+  const shareText = `Check out ${userProfile?.name}'s profile! Visit now: ${url}`;
+
   return (
     <Container maxW={"container.lg"}>
       <Flex gap={20}>
@@ -43,40 +45,43 @@ const HomePage = () => {
           <SuggestedUsers />
         </Box>
       </Flex>
-      {/* Share buttons section */}
       <Box mt={10}>
         <Flex justify="center" gap={5}>
-          <EmailShareButton url={url}>
+          <EmailShareButton
+            url={url}
+            subject="Check out this profile"
+            body={shareText}
+          >
             <EmailIcon size={40} round={true} />
           </EmailShareButton>
-          <FacebookShareButton url={url}>
+          <FacebookShareButton url={url} quote={shareText}>
             <FacebookIcon size={40} round={true} />
           </FacebookShareButton>
-          <FacebookMessengerShareButton url={url}>
+          <FacebookMessengerShareButton url={url} title={shareText}>
             <FacebookMessengerIcon size={40} round={true} />
           </FacebookMessengerShareButton>
-          <LinkedinShareButton url={url}>
+          <LinkedinShareButton url={url} title={shareText}>
             <LinkedinIcon size={40} round={true} />
           </LinkedinShareButton>
-          <RedditShareButton url={url}>
+          <RedditShareButton url={url} title={shareText}>
             <RedditIcon size={40} round={true} />
           </RedditShareButton>
-          <TelegramShareButton url={url}>
+          <TelegramShareButton url={url} title={shareText}>
             <TelegramIcon size={40} round={true} />
           </TelegramShareButton>
-          <TwitterShareButton url={url}>
+          <TwitterShareButton url={url} title={shareText}>
             <TwitterIcon size={40} round={true} />
           </TwitterShareButton>
-          <ViberShareButton url={url}>
+          <ViberShareButton url={url} text={shareText}>
             <ViberIcon size={40} round={true} />
           </ViberShareButton>
-          <WeiboShareButton url={url}>
+          <WeiboShareButton url={url} title={shareText}>
             <WeiboIcon size={40} round={true} />
           </WeiboShareButton>
-          <WhatsappShareButton url={url}>
+          <WhatsappShareButton url={url} title={shareText}>
             <WhatsappIcon size={40} round={true} />
           </WhatsappShareButton>
-          <PinterestShareButton url={url}>
+          <PinterestShareButton url={url} media={url} description={shareText}>
             <PinterestIcon size={40} round={true} />
           </PinterestShareButton>
         </Flex>
