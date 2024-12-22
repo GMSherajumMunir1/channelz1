@@ -80,7 +80,6 @@ const ProfilePage = () => {
           <LinkedinShareButton url={url}>
             <LinkedinIcon size={40} round={true} />
           </LinkedinShareButton>
-
           <RedditShareButton url={url}>
             <RedditIcon size={40} round={true} />
           </RedditShareButton>
@@ -99,9 +98,9 @@ const ProfilePage = () => {
           <WhatsappShareButton url={url}>
             <WhatsappIcon size={40} round={true} />
           </WhatsappShareButton>
-          <EmailShareButton url={url}>
+          {/* <EmailShareButton url={url}>
             <EmailIcon size={40} round={true} />
-          </EmailShareButton>
+          </EmailShareButton> */}
           <PinterestShareButton url={url}>
             <PinterestIcon size={40} round={true} />
           </PinterestShareButton>
