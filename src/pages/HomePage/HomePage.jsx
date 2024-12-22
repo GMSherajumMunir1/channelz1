@@ -81,7 +81,11 @@ const HomePage = () => {
           <WhatsappShareButton url={url} title={shareText}>
             <WhatsappIcon size={40} round={true} />
           </WhatsappShareButton>
-          <PinterestShareButton url={url} media={url} description={shareText}>
+          <PinterestShareButton
+            url={url}
+            media={userProfile?.profileImageUrl}
+            description={shareText}
+          >
             <PinterestIcon size={40} round={true} />
           </PinterestShareButton>
         </Flex>
