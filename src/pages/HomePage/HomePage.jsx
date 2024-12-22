@@ -46,6 +46,9 @@ const HomePage = () => {
       {/* Share buttons section */}
       <Box mt={10}>
         <Flex justify="center" gap={5}>
+          <EmailShareButton url={url}>
+            <EmailIcon size={40} round={true} />
+          </EmailShareButton>
           <FacebookShareButton url={url}>
             <FacebookIcon size={40} round={true} />
           </FacebookShareButton>
@@ -73,9 +76,6 @@ const HomePage = () => {
           <WhatsappShareButton url={url}>
             <WhatsappIcon size={40} round={true} />
           </WhatsappShareButton>
-          {/* <EmailShareButton url={url}>
-            <EmailIcon size={40} round={true} />
-          </EmailShareButton> */}
           <PinterestShareButton url={url}>
             <PinterestIcon size={40} round={true} />
           </PinterestShareButton>
