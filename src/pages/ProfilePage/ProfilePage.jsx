@@ -13,6 +13,30 @@ import ProfilePosts from "../../components/Profile/ProfilePosts";
 import useGetUserProfileByUsername from "../../hooks/useGetUserProfileByUsername";
 import { useParams } from "react-router-dom";
 import { Link as RouterLink } from "react-router-dom";
+import {
+  EmailShareButton,
+  EmailIcon,
+  FacebookShareButton,
+  FacebookIcon,
+  FacebookMessengerShareButton,
+  FacebookMessengerIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  PinterestShareButton,
+  PinterestIcon,
+  RedditShareButton,
+  RedditIcon,
+  TelegramShareButton,
+  TelegramIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  ViberShareButton,
+  ViberIcon,
+  WeiboShareButton,
+  WeiboIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+} from "react-share";
 
 const ProfilePage = () => {
   const { username } = useParams();
@@ -20,6 +44,7 @@ const ProfilePage = () => {
 
   const userNotFound = !isLoading && !userProfile;
   if (userNotFound) return <UserNotFound />;
+  const url = "https://channelz1.vercel.app";
 
   return (
     <Container maxW="container.lg" py={5}>
@@ -44,7 +69,43 @@ const ProfilePage = () => {
       >
         <ProfileTabs />
         <ProfilePosts />
-        {/* <Share /> */}
+        {/* Share buttons section */}
+        <Flex justify="center" gap={5} mt={10}>
+          <FacebookShareButton url={url}>
+            <FacebookIcon size={40} round={true} />
+          </FacebookShareButton>
+          <FacebookMessengerShareButton url={url}>
+            <FacebookMessengerIcon size={40} round={true} />
+          </FacebookMessengerShareButton>
+          <LinkedinShareButton url={url}>
+            <LinkedinIcon size={40} round={true} />
+          </LinkedinShareButton>
+
+          <RedditShareButton url={url}>
+            <RedditIcon size={40} round={true} />
+          </RedditShareButton>
+          <TelegramShareButton url={url}>
+            <TelegramIcon size={40} round={true} />
+          </TelegramShareButton>
+          <TwitterShareButton url={url}>
+            <TwitterIcon size={40} round={true} />
+          </TwitterShareButton>
+          <ViberShareButton url={url}>
+            <ViberIcon size={40} round={true} />
+          </ViberShareButton>
+          <WeiboShareButton url={url}>
+            <WeiboIcon size={40} round={true} />
+          </WeiboShareButton>
+          <WhatsappShareButton url={url}>
+            <WhatsappIcon size={40} round={true} />
+          </WhatsappShareButton>
+          <EmailShareButton url={url}>
+            <EmailIcon size={40} round={true} />
+          </EmailShareButton>
+          <PinterestShareButton url={url}>
+            <PinterestIcon size={40} round={true} />
+          </PinterestShareButton>
+        </Flex>
       </Flex>
     </Container>
   );
